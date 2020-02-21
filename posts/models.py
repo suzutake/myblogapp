@@ -7,8 +7,3 @@ class Post(object):
     published = models.DateTimeField()
     image = models.ImageField(upload_to='media/')
     body = models.TextField()
-
-
-    def __init__(self, arg):
-        super(Post, self).__init__()
-        self.arg = arg
