@@ -8,8 +8,12 @@
 
   <h2>最新の投稿</h2>
   {% for post in posts.all  %}
-    {{ post.title}}
-    
+    {{ post.title }}
+    <br />
+    {{ post.publised }}
+    <br />
+    {{ post.body }}
+    <br />
   {% endfor %}
 </body>
 </html>
