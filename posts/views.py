@@ -14,5 +14,6 @@ def index(request):
 
 
 def post_detail(request,post_id):
-    return render(request, 'posts/post_detail.html',{'post_id':post_id})
+    print(post_id)
+    return render(request, 'posts/post_detail.html', {'post_id':post_id})
 # Create your views here.
