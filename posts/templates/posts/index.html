@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-<<head>
-  <<title>lists</title>
+<head>
+  <title>lists</title>
 </head>
-<<body>
-  <<h2>これは投稿一覧のページです</h2>
+<body>
+  <h1>ようこそ</h1>
+
+  <h2>最新の投稿</h2>
+  {% for post in posts.all  %}
+    {{ post.title}}
+    
+  {% endfor %}
 </body>
 </html>
