@@ -13,4 +13,4 @@ class Post(models.Model):
         return self.title
 
     def summary(self):
-        return self.body[:30]  #pickup first 100 charactor
+        return self.body[:45]  #pickup first 100 charactor
