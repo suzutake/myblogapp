@@ -17,10 +17,14 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.conf import settings
+from posts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # for showing posts app
     path('posts/', include('posts.urls')),
-    # for showing picture by static file
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # for showing detail screen
+    #path('post/<int:pk>/', views.DetailView.as_view(), name='detail'),
+    path('post/<int:post_id>/', posts.view.post_detail,name="post_detail"),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for showing picture by static file
