@@ -45,16 +45,21 @@
     </form>
   </div>
 </nav>
+
+<!-- ************************** -->
 <div class="container">
   <!-- <h1>ようこそ</h1> -->
+  <!-- staticを再読み込みする場合はサーバ再起動が必要 -->
+  {% load static %}
+  <img src="{% static 'posts/home.png' %}" class="img-fluid rounded" style="max-height: 200px" />
 
-  <h2>最新の投稿</h2>
+  <h3>最新の投稿</h3>
   {% for post in posts.all  %}
     <a href ="{% url 'post_detail' post.id %}">{{ post.title }}</a>
     <br />
     {{ post.publised }}
     <br />
-    <img src="{{post.image.url}}"  class="img-fluid rounded" alt="Responsive image" />
+    <img src="{{post.image.url}}"  class="img-fluid rounded" style="max-height: 200px" />
     <br />
     {{ post.summary }}
     <br /><br />
