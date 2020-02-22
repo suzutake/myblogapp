@@ -8,8 +8,7 @@
 
   <h2>最新の投稿</h2>
   {% for post in posts.all  %}
-    #{{ post.id}}:
-    {{ post.title }}
+    <a href ="{% url 'post_detail' post.id %}">{{ post.title }}</a>
     <br />
     {{ post.publised }}
     <br />

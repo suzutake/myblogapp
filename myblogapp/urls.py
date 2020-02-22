@@ -24,7 +24,6 @@ urlpatterns = [
     # for showing posts app
     path('posts/', include('posts.urls')),
     # for showing detail screen
-    #path('post/<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('posts/<int:post_id>/', views.post_detail, name='post_detail'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for showing picture by static file
