@@ -13,22 +13,23 @@
 <div class="container">
   <!-- <h1>ようこそ</h1> -->
   <!-- staticを再読み込みする場合はサーバ再起動が必要 -->
+  <!--
   {% load static %}
   <img src="{% static 'posts/home.png' %}" class="img-fluid rounded mx-auto d-block" style="max-height: 200px" />
-
+-->
   <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
       <h5 class="mb-0">
         <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
           <!-- item1 header -->
-          Customer8
+          Customer Linh
         </a>
       </h5>
     </div><!-- /.card-header -->
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        <!-- item1 contents -->
+        <!-- start customer contents -->
           <p>
             <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
               SSgel Tay 130K
@@ -36,7 +37,27 @@
           </p>
           <div class="collapse" id="collapseExample1">
             <div class="card card-body">
-              コンテンツが表示されます。
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Quynh</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">100K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
             </div>
           </div>
 
@@ -47,10 +68,30 @@
           </p>
           <div class="collapse" id="collapseExample2">
             <div class="card card-body">
-              コンテンツが表示されます。
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">60K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Trang</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
             </div>
           </div>
-          <!-- item1 contents finish -->
+          <!-- end customer contents -->
       </div><!-- /.card-body -->
     </div><!-- /.collapse -->
   </div><!-- /.card -->
@@ -58,13 +99,44 @@
     <div class="card-header" role="tab" id="headingTwo">
       <h5 class="mb-0">
         <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
-          Customer9
+          Customer Phuong Anh
         </a>
       </h5>
     </div><!-- /.card-header -->
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        アイテム2のコンテンツ
+        <!-- start customer contents -->
+        <p>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+            SSgel Tay 130K
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample1">
+          <div class="card card-body">
+            <!-- start staff detail -->
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="card img-thumbnail">
+                  <div class="card-body px-2 py-3">
+                    <h5 class="card-title">Quynh</h5>
+                    <p class="card-text">30K</p>
+                  </div><!-- /.card-body -->
+                </div><!-- /.card -->
+              </div><!-- /.col-sm-6.col-md-3 -->
+
+              <div class="col-sm-6 col-md-3">
+                <div class="card img-thumbnail">
+                  <div class="card-body px-2 py-3">
+                    <h5 class="card-title">Phuong</h5>
+                    <p class="card-text">100K</p>
+                  </div><!-- /.card-body -->
+                </div><!-- /.card -->
+              </div><!-- /.col-sm-6.col-md-3 -->
+            </div><!-- /.row -->
+            <!-- end staff detail -->
+          </div>
+        </div>
+        <!-- end customer contents -->
       </div><!-- /.card-body -->
     </div><!-- /.collapse -->
   </div><!-- /.card -->
@@ -72,13 +144,227 @@
     <div class="card-header" role="tab" id="headingThree">
       <h5 class="mb-0">
         <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
-          Customer10
+          Customer Thuy
         </a>
       </h5>
     </div><!-- /.card-header -->
     <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-        アイテム3のコンテンツ
+        <!-- start customer contents -->
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Tay 130K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Quynh</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">100K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Chan 90K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">60K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Trang</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+          <!-- end customer contents -->
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse4" role="button" aria-expanded="false" aria-controls="collapseThree">
+          Customer Thao
+        </a>
+      </h5>
+    </div><!-- /.card-header -->
+    <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <!-- start customer contents -->
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Tay 130K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Quynh</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">100K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Chan 90K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">60K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Trang</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+          <!-- end customer contents -->
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapse5" role="button" aria-expanded="false" aria-controls="collapseThree">
+          Customer Hoa
+        </a>
+      </h5>
+    </div><!-- /.card-header -->
+    <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <!-- start customer contents -->
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Tay 130K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample1">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Quynh</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">100K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Chan 90K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample2">
+            <div class="card card-body">
+              <!-- start staff detail -->
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Phuong</h5>
+                      <p class="card-text">60K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="card img-thumbnail">
+                    <div class="card-body px-2 py-3">
+                      <h5 class="card-title">Trang</h5>
+                      <p class="card-text">30K</p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div><!-- /.col-sm-6.col-md-3 -->
+              </div><!-- /.row -->
+              <!-- end staff detail -->
+            </div>
+          </div>
+          <!-- end customer contents -->
       </div><!-- /.card-body -->
     </div><!-- /.collapse -->
   </div><!-- /.card -->
