@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>screen1</title>
+</head>
+<body>
+<div class="container">
+  <!-- <h1>ようこそ</h1> -->
+  <!-- staticを再読み込みする場合はサーバ再起動が必要 -->
+  {% load static %}
+  <img src="{% static 'posts/home.png' %}" class="img-fluid rounded mx-auto d-block" style="max-height: 200px" />
+
+  <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a class="text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+          <!-- item1 header -->
+          Customer8
+        </a>
+      </h5>
+    </div><!-- /.card-header -->
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <!-- item1 contents -->
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Tay 130K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              コンテンツが表示されます。
+            </div>
+          </div>
+
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              SSgel Chan 90K
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              コンテンツが表示されます。
+            </div>
+          </div>
+          <!-- item1 contents finish -->
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+          Customer9
+        </a>
+      </h5>
+    </div><!-- /.card-header -->
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        アイテム2のコンテンツ
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed text-body d-block p-3 m-n3" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+          Customer10
+        </a>
+      </h5>
+    </div><!-- /.card-header -->
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        アイテム3のコンテンツ
+      </div><!-- /.card-body -->
+    </div><!-- /.collapse -->
+  </div><!-- /.card -->
+</div><!-- /#accordion -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
