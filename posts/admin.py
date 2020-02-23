@@ -4,9 +4,8 @@ from django.contrib import admin
 from .models import Post
 
 # Before register by admin screen, need to Import
-from .models import MenuMaster
-from .models import MenuDetail
-from .models import Customer
+from .models import MenuMaster, MenuDetail, Customer
+
 
 admin.site.register(Post)
 
