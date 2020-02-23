@@ -1,17 +1,21 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Post
+# from .models import Post
 
 # Before register by admin screen, need to Import
 from .models import MenuMaster, MenuDetail, Customer
 
 
-admin.site.register(Post)
+#admin.site.register(Post)
 
-admin.site.register(Customer)
+#admin.site.register(Customer)
 #admin.site.register(MenuMaster)
-admin.site.register(MenuDetail)
+#admin.site.register(MenuDetail)
+
+class MenuInLine(admin.StackedInline):
+    model = MenuMaster
+    extra = 4
 
 
 class DetailInline(admin.TabularInline):
@@ -19,11 +23,30 @@ class DetailInline(admin.TabularInline):
     extra = 3
 
 
+class CustomerAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('name', {'fields': ['name']}),
+        ('Date information', {'fields': ['visitedDate']})
+    ]
+    inlines = [MenuInLine]
+
+admin.site.register(Customer, CustomerAdmin)
+
+
 class MenuMasterAdmin(admin.ModelAdmin):
-    #fieldsets = [
-    #    (None,               {'fields': ['name']}),
-    #    ('Date information', {'fields': ['visitedDate'], 'classes': ['collapse']}),
-    #]
-    inlines = [DetailInline]
+    list_display = ('id', 'customer', 'customer_visitedDate', 'name')
+
+    fieldsets = [
+        ('customer', {'fields': ['customer']}),
+        ('menu', {'fields': ['name']})
+    ]
+
+    def customer_visitedDate(self, obj):
+        return obj.customer.visitedDate
+
+    #inlines = [DetailInLine]
+
+    #def nailst_name(self, obj):
+    #    return obj.MenuDetail.nailist
 
 admin.site.register(MenuMaster, MenuMasterAdmin)

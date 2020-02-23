@@ -23,6 +23,9 @@ class Customer(models.Model):
         # return post.title for admin.lists
         return self.name
 
+    def getVisitedDate(self):
+        return self.visitedDate
+
 class MenuMaster(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, default='1')
     name = models.CharField(max_length=100)
