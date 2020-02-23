@@ -27,6 +27,6 @@ urlpatterns = [
     path('posts/<int:post_id>/', views.post_detail, name='post_detail'),
 
     #original show date_detail
-    path('date/', views.date_detail, name='date_detail')
+    path('date/', views.date_detail, name='date_detail'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for showing picture by static file
