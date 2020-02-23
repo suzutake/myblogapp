@@ -17,7 +17,7 @@ class Post(models.Model):
 
 class Customer(models.Model):
     name = models.CharField(max_length=30, default='guest', blank='true', null='true')
-    visitedDate = models.DateTimeField()
+    visitedDate = models.DateField()
 
     def __str__(self):
         # return post.title for admin.lists
@@ -26,13 +26,14 @@ class Customer(models.Model):
     def getVisitedDate(self):
         return self.visitedDate
 
+
 class MenuMaster(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, default='1')
     name = models.CharField(max_length=100)
 
     def __str__(self):
         # return post.title for admin.lists
-        return self.name
+        return self.customer.visitedDate.strftime('%Y-%m-%d') +'-' + self.customer.name + '-' + self.name
 
 
 class MenuDetail(models.Model):

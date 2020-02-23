@@ -9,16 +9,13 @@ from .models import MenuMaster, MenuDetail, Customer
 
 #admin.site.register(Post)
 
-#admin.site.register(Customer)
-#admin.site.register(MenuMaster)
-#admin.site.register(MenuDetail)
 
 class MenuInLine(admin.StackedInline):
     model = MenuMaster
     extra = 4
 
 
-class DetailInline(admin.TabularInline):
+class DetailInline(admin.StackedInline):
     model = MenuDetail
     extra = 3
 
@@ -33,20 +30,40 @@ class CustomerAdmin(admin.ModelAdmin):
 admin.site.register(Customer, CustomerAdmin)
 
 
-class MenuMasterAdmin(admin.ModelAdmin):
-    list_display = ('id', 'customer', 'customer_visitedDate', 'name')
+#class MenuMasterAdmin(admin.ModelAdmin):
+    #list_display = ('id', 'customer', 'customer_visitedDate', 'name','nailist_name')
+#    list_display = ('id', 'customer', 'customer_visitedDate', 'name')
+#    list_display_links = ['id', 'customer', 'name']
+
+#    fieldsets = [
+#        ('customer', {'fields': ['customer']}),
+#        ('menu', {'fields': ['name']})
+#    ]
+
+#    def customer_visitedDate(self, obj):
+#        return obj.customer.visitedDate
+
+#    def nailist_name(self, obj):
+#        return obj.MenuDetail.nailist
+
+#    inlines = [DetailInline]
+
+
+#admin.site.register(MenuMaster, MenuMasterAdmin)
+
+class MenuDetailAdmin(admin.ModelAdmin):
+    list_display = ('name', 'nailist','money')
+    list_display_links = ['name','nailist']
 
     fieldsets = [
-        ('customer', {'fields': ['customer']}),
-        ('menu', {'fields': ['name']})
+        #('customer', {'fields': ['customer']}),
+        ('menu', {'fields': ['name']}),
+        ('nailist',{'fields': ['nailist']}),
+        ('money',{'fields': ['money']})
     ]
+    #fields = ['id', 'name', 'nailist','money']
 
-    def customer_visitedDate(self, obj):
-        return obj.customer.visitedDate
+    def customer(self, obj):
+        return obj.name.customer
 
-    #inlines = [DetailInLine]
-
-    #def nailst_name(self, obj):
-    #    return obj.MenuDetail.nailist
-
-admin.site.register(MenuMaster, MenuMasterAdmin)
+admin.site.register(MenuDetail, MenuDetailAdmin)
